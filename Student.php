@@ -1,4 +1,19 @@
-function __construct() 
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of Student
+ *
+ * @author Rocky
+ */
+
+class Student {
+    function __construct() 
 { $this->surname = '';
 $this->first_name = '';
 $this->emails = array(); 
@@ -20,8 +35,7 @@ foreach($this->emails as $which=>$what)
 $result .= $which . ': '. $what. "\n";
 $result .= "\n"; return '<pre>'.$result.'</pre>'; 
 } 
-
-
+}
 
 $first = new Student(); 
 $first->surname = "Doe";
@@ -31,7 +45,7 @@ $first->add_email('work','jdoe@mcdonalds.com');
 $first->add_grade(65); 
 $first->add_grade(75); 
 $first->add_grade(55);
-$students['j123'] = $first
+$students['j123'] = $first;
 
 $second = new Student(); 
 $second->surname = "Einstein";
@@ -42,4 +56,4 @@ $second->add_email('work2','albert@physics.mit.edu');
 $second->add_grade(95);
 $second->add_grade(80);
 $second->add_grade(50);
-$students['a456'] = $second
+$students['a456'] = $second;
