@@ -35,6 +35,7 @@ foreach($this->emails as $which=>$what)
 $result .= $which . ': '. $what. "\n";
 $result .= "\n"; return '<pre>'.$result.'</pre>'; 
 } 
+
 }
 
 $first = new Student(); 
@@ -57,3 +58,16 @@ $second->add_grade(95);
 $second->add_grade(80);
 $second->add_grade(50);
 $students['a456'] = $second;
+
+$third= new Student(); 
+$third->surname = "Kaizhong";
+$third->first_name = "Luo";
+$third->add_email('home','707946518@qq.com');
+$third->add_email('work1','707946518@qq.com');
+$third->add_email('work2','707946518@qq.com');
+$third->add_grade(93);
+$third->add_grade(81);
+$third->add_grade(51);
+$students['a789'] = $second;
+
+ksort($students);
